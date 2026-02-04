@@ -1,0 +1,110 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  background: #89cccd;
+  color: #fff;
+}
+.sidebar {
+  width: 320px;
+  padding: 24px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.content {
+  margin-left: 320px;
+  padding: 60px;
+  width: calc(100% - 320px);
+}
+.profile-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 24px;
+  text-align: center;
+}
+.profile-card h2,
+.profile-card p,
+.email,
+.location {
+  color: black;
+}
+.profile-card img {
+  width: 100%;
+  border-radius: 16px;
+  margin: 16px 0;
+}
+
+.top-menu {
+  position: fixed;
+  top: 28px;
+  left: 360px;
+  right: 40px;
+
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
+
+.top-menu nav {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  padding: 14px 32px;
+  border-radius: 999px;
+
+  display: flex;
+  gap: 32px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.top-menu nav a:hover {
+  opacity: 1;
+  color: #f3a4c7;
+}
+.top-menu nav a.active {
+  color: #f3a4c7;
+  opacity: 1;
+}
+.hero h1 {
+  font-size: 56px;
+  line-height: 1.2;
+}
+
+.hero span {
+  color: #f3a4c7;
+}
+
+.button-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-icon-link .btn-contact {
+  width: 50px;
+  margin: 10px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: rgb(196, 192, 192);
+  border-radius: 5px;
+}
+
+.button-icon-link .btn-contact img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
