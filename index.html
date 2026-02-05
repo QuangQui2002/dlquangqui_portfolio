@@ -5,15 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quang Qui</title>
     <link rel="stylesheet" href="index.css" />
-    <script src="index.js"></script>
   </head>
   <body>
     <div class="container">
-      <!-- LEFT -->
       <aside class="sidebar">
         <div class="profile-card">
           <h2>ĐÀO LÂM QUANG QUI</h2>
-          <p>DEVELOPER</p>
+          <p>SOFTWARE ENGINEER</p>
 
           <img src="image/danny.jpg" alt="avatar" />
 
@@ -21,52 +19,192 @@
           <p class="location">Hồ Chí Minh</p>
 
           <div class="button-icon-link">
-            <a class="btn-contact" href="https://www.facebook.com/dlquangqui">
+            <a
+              class="btn-contact"
+              href="https://www.facebook.com/dlquangqui"
+              target="_blank"
+            >
               <img src="image/facebook.png" alt="" />
             </a>
             <a
               class="btn-contact"
               href="https://www.instagram.com/dlquangqui.danny/"
+              target="_blank"
             >
               <img src="image/instagram.png" alt="" /></a
-            ><a class="btn-contact" href="https://github.com/QuangQui2002">
+            ><a
+              class="btn-contact"
+              href="https://github.com/QuangQui2002"
+              target="_blank"
+            >
               <img src="image/github-sign.png" alt="" />
             </a>
           </div>
         </div>
       </aside>
 
-      <!-- RIGHT -->
       <main class="content">
         <header class="top-menu">
           <nav>
-            <a href="#about">Giới thiệu</a>
-            <a href="#projects">Dự án</a>
-            <a href="#skills">Kỹ năng</a>
-            <a href="#contact">Liên hệ</a>
+            <a href="#about" class="menu-btn">Giới thiệu</a>
+            <a href="#education" class="menu-btn">Học Vấn</a>
+            <a href="#projects" class="menu-btn">Dự án</a>
+            <a href="#skills" class="menu-btn">Kỹ năng</a>
+            <a href="#contact" class="menu-btn">Liên hệ</a>
           </nav>
         </header>
-
-        <section id="about" class="hero">
+        <section id="about" class="section">
           <h1>
-            Hi! Mình là <span>QUi</span>, <br />
-            Freelance Website <br />
-            Design & Marketer
+            Chào bạn! Mình là <span>Qui</span>, <br />
+            Software Engineer <br />
           </h1>
 
-          <p class="desc">Tôi thích thiết kế những thứ đơn giản, đẹp mắt...</p>
+          <p class="desc">
+            Tôi thích tìm tòi, học hỏi và tập trung làm những thứ mình thích!
+          </p>
         </section>
-        <section id="project" class="hero">
-          <h1>Đây là Dự án</h1>
+        <section id="education" class="section">
+          <h1>HỌC VẤN</h1>
 
-          <p class="desc">Tôi thích thiết kế những thứ đơn giản, đẹp mắt...</p>
-        </section>
-        <section id="skills" class="hero">
-          <h1>Đây là Kỹ Năng</h1>
+          <div class="education-timeline">
+            <div class="education-item">
+              <span class="time">2020 – 2023</span>
+              <h3>Cao Đẳng Kỹ Thuật Cao Thắng</h3>
+              <p>Chuyên ngành Công Nghệ Thông Tin</p>
+            </div>
 
-          <p class="desc">Tôi thích thiết kế những thứ đơn giản, đẹp mắt...</p>
+            <div class="education-item">
+              <span class="time">2026 – Hiện tại</span>
+              <h3>Đại Học Trà Vinh</h3>
+              <p>Chuyên ngành Công Nghệ Thông Tin</p>
+            </div>
+          </div>
         </section>
-        <section id="infomation" class="hero">
+
+        <section id="projects" class="section">
+          <h1 class="section-title">DỰ ÁN</h1>
+
+          <div class="project-list">
+            <div class="project-item">
+              <div class="project-image">
+                <img src="image/project_1.png" alt="Project 1" />
+              </div>
+              <div class="project-content">
+                <span class="project-time">2023 – 2024</span>
+                <h3>Hệ thống quản lý học viên</h3>
+                <p>
+                  Website quản lý học viên, lịch học, điểm danh, bài tập online.
+                </p>
+                <ul class="tech-list">
+                  <li>Node.js</li>
+                  <li>MySQL</li>
+                  <li>Sequelize</li>
+                  <li>jQuery</li>
+                </ul>
+
+                <div class="project-links">
+                  <a href="#">Demo</a>
+                  <a href="#">GitHub</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="project-item">
+              <div class="project-image">
+                <img src="image/project_1.png" alt="Project 2" />
+              </div>
+
+              <div class="project-content">
+                <span class="project-time">2023 – 2024</span>
+                <h3>Website portfolio cá nhân</h3>
+                <p>Website giới thiệu bản thân, dự án và kỹ năng.</p>
+
+                <ul class="tech-list">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="skills" class="section skills-section">
+          <h2 class="section-title">My Skills</h2>
+
+          <div class="skills-wrapper">
+            <!-- Others -->
+            <div class="skill-card reveal">
+              <h3>Others</h3>
+
+              <div class="skill">
+                <span>Responsive Web Design</span>
+                <div class="progress">
+                  <div class="progress-bar" data-percent="85"></div>
+                </div>
+              </div>
+
+              <div class="skill">
+                <span>Website Optimization</span>
+                <div class="progress">
+                  <div class="progress-bar" data-percent="80"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Coding -->
+            <div class="skill-card main reveal">
+              <h3>Coding Skills</h3>
+
+              <div class="skill">
+                <span>HTML / CSS / JS</span>
+                <div class="progress">
+                  <div class="progress-bar" data-percent="90"></div>
+                </div>
+              </div>
+
+              <div class="skill">
+                <span>NodeJS / MySQL</span>
+                <div class="progress">
+                  <div class="progress-bar" data-percent="85"></div>
+                </div>
+              </div>
+
+              <div class="skill">
+                <span>jQuery</span>
+                <div class="progress">
+                  <div class="progress-bar" data-percent="80"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tools -->
+            <div class="skill-card reveal">
+              <h3>Tools</h3>
+
+              <div class="skill">
+                <span>Git / Github</span>
+                <div class="progress">
+                  <div class="progress-bar" data-percent="85"></div>
+                </div>
+              </div>
+
+              <div class="skill">
+                <span>VS Code</span>
+                <div class="progress">
+                  <div class="progress-bar" data-percent="90"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <span>VS Code</span>
+                <div class="progress">
+                  <div class="progress-bar" data-percent="90"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact" class="section">
           <h1>Đây là liên hệ</h1>
 
           <p class="desc">Tôi thích thiết kế những thứ đơn giản, đẹp mắt...</p>
@@ -74,4 +212,5 @@
       </main>
     </div>
   </body>
+  <script src="index.js"></script>
 </html>
