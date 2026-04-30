@@ -10,36 +10,9 @@
     <div class="container">
       <aside class="sidebar">
         <div class="profile-card">
+          <img class="avatar" src="image/danny.jpg" alt="avatar" />
           <h2>ĐÀO LÂM QUANG QUI</h2>
           <p>SOFTWARE ENGINEER</p>
-
-          <img src="image/danny.jpg" alt="avatar" />
-
-          <p class="email">dlquangqui@gmail.com</p>
-          <p class="location">Hồ Chí Minh</p>
-
-          <div class="button-icon-link">
-            <a
-              class="btn-contact"
-              href="https://www.facebook.com/dlquangqui"
-              target="_blank"
-            >
-              <img src="image/facebook.png" alt="" />
-            </a>
-            <a
-              class="btn-contact"
-              href="https://www.instagram.com/dlquangqui.danny/"
-              target="_blank"
-            >
-              <img src="image/instagram.png" alt="" /></a
-            ><a
-              class="btn-contact"
-              href="https://github.com/QuangQui2002"
-              target="_blank"
-            >
-              <img src="image/github-sign.png" alt="" />
-            </a>
-          </div>
         </div>
       </aside>
 
@@ -54,29 +27,76 @@
           </nav>
         </header>
         <section id="about" class="section">
-          <h1>
-            Chào bạn! Mình là <span>Qui</span>, <br />
-            Software Engineer <br />
+          <h1 class="about-hero">
+            Chào bạn! Mình là <span>Qui</span> — Software Engineer
           </h1>
 
           <p class="desc">
             Tôi thích tìm tòi, học hỏi và tập trung làm những thứ mình thích!
           </p>
+
+          <div class="about-meta">
+            <a class="meta-chip" href="tel:+84900000000" aria-label="Số điện thoại">
+              <span class="meta-label">SĐT</span>
+              <span class="meta-value">0900 000 000</span>
+            </a>
+            <div class="meta-chip" aria-label="Ngày sinh">
+              <span class="meta-label">Ngày sinh</span>
+              <span class="meta-value">01/01/2002</span>
+            </div>
+            <a
+              class="meta-chip"
+              href="mailto:dlquangqui@gmail.com"
+              aria-label="Email"
+            >
+              <span class="meta-label">Email</span>
+              <span class="meta-value">dlquangqui@gmail.com</span>
+            </a>
+            <div class="meta-chip" aria-label="Địa điểm">
+              <span class="meta-label">Khu vực</span>
+              <span class="meta-value">Hồ Chí Minh</span>
+            </div>
+          </div>
         </section>
         <section id="education" class="section">
-          <h1>HỌC VẤN</h1>
+          <h1 class="section-title">HỌC VẤN & KINH NGHIỆM</h1>
 
-          <div class="education-timeline">
-            <div class="education-item">
-              <span class="time">2020 – 2023</span>
-              <h3>Cao Đẳng Kỹ Thuật Cao Thắng</h3>
-              <p>Chuyên ngành Công Nghệ Thông Tin</p>
+          <div class="split-grid">
+            <div class="split-card">
+              <h3 class="split-title">Học vấn</h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="time">2020 – 2023</span>
+                  <h4>Cao Đẳng Kỹ Thuật Cao Thắng</h4>
+                  <p>Chuyên ngành Công Nghệ Thông Tin</p>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="time">2026 – Hiện tại</span>
+                  <h4>Đại Học Trà Vinh</h4>
+                  <p>Chuyên ngành Công Nghệ Thông Tin</p>
+                </div>
+              </div>
             </div>
 
-            <div class="education-item">
-              <span class="time">2026 – Hiện tại</span>
-              <h3>Đại Học Trà Vinh</h3>
-              <p>Chuyên ngành Công Nghệ Thông Tin</p>
+            <div class="split-card">
+              <h3 class="split-title">Kinh nghiệm</h3>
+              <div class="timeline">
+                <div class="timeline-item">
+                  <span class="time">2024 – Hiện tại</span>
+                  <h4>Software Engineer</h4>
+                  <p>
+                    Mô tả ngắn: phát triển web/app, làm việc với backend, database
+                    và UI.
+                  </p>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="time">2023 – 2024</span>
+                  <h4>Intern / Freelancer</h4>
+                  <p>Mô tả ngắn: tham gia dự án, tối ưu UI/UX, sửa bug.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -84,49 +104,54 @@
         <section id="projects" class="section">
           <h1 class="section-title">DỰ ÁN</h1>
 
-          <div class="project-list">
-            <div class="project-item">
-              <div class="project-image">
-                <img src="image/project_1.png" alt="Project 1" />
-              </div>
-              <div class="project-content">
-                <span class="project-time">2023 – 2024</span>
+          <div class="project-lines">
+            <article class="project-row">
+              <div class="project-head">
                 <h3>Hệ thống quản lý học viên</h3>
-                <p>
-                  Website quản lý học viên, lịch học, điểm danh, bài tập online.
-                </p>
-                <ul class="tech-list">
-                  <li>Node.js</li>
-                  <li>MySQL</li>
-                  <li>Sequelize</li>
-                  <li>jQuery</li>
-                </ul>
-
-                <div class="project-links">
-                  <a href="#">Demo</a>
-                  <a href="#">GitHub</a>
-                </div>
-              </div>
-            </div>
-
-            <!-- PROJECT 2 -->
-            <div class="project-item">
-              <div class="project-image">
-                <img src="image/project_1.png" alt="Project 2" />
-              </div>
-
-              <div class="project-content">
                 <span class="project-time">2023 – 2024</span>
-                <h3>Website portfolio cá nhân</h3>
-                <p>Website giới thiệu bản thân, dự án và kỹ năng.</p>
-
-                <ul class="tech-list">
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-                </ul>
               </div>
-            </div>
+              <p class="project-desc">
+                Website quản lý học viên, lịch học, điểm danh và bài tập online.
+                Thiết kế theo hướng CRUD + phân quyền + tối ưu trải nghiệm thao
+                tác cho giáo viên.
+              </p>
+              <ul class="project-highlights">
+                <li>Quản lý danh sách học viên, lớp học, lịch học và điểm danh.</li>
+                <li>Phân quyền cơ bản: admin/giáo viên/học viên.</li>
+                <li>Tìm kiếm, lọc dữ liệu, phân trang và export báo cáo.</li>
+              </ul>
+              <ul class="tech-list">
+                <li>Node.js</li>
+                <li>MySQL</li>
+                <li>Sequelize</li>
+                <li>jQuery</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" rel="noopener">Demo</a>
+                <a href="#" rel="noopener">GitHub</a>
+              </div>
+            </article>
+
+            <article class="project-row">
+              <div class="project-head">
+                <h3>Website portfolio cá nhân</h3>
+                <span class="project-time">2023 – 2024</span>
+              </div>
+              <p class="project-desc">
+                Website giới thiệu bản thân, dự án và kỹ năng. Tập trung UI sạch,
+                responsive, scroll-spy menu và animation mượt.
+              </p>
+              <ul class="project-highlights">
+                <li>Thiết kế theo layout sidebar + top menu hiện đại.</li>
+                <li>Tối ưu typography/spacing, tương thích mobile.</li>
+                <li>Section-based navigation với active menu chính xác.</li>
+              </ul>
+              <ul class="tech-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+            </article>
           </div>
         </section>
         <section id="skills" class="section skills-section">
@@ -205,9 +230,137 @@
           </div>
         </section>
         <section id="contact" class="section">
-          <h1>Đây là liên hệ</h1>
+          <h1 class="section-title">LIÊN HỆ</h1>
 
-          <p class="desc">Tôi thích thiết kế những thứ đơn giản, đẹp mắt...</p>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3>Thông tin liên hệ</h3>
+              <p class="contact-desc">
+                Mình phản hồi nhanh qua email hoặc Facebook. Nếu cần trao đổi chi
+                tiết, bạn có thể gửi form bên cạnh.
+              </p>
+
+              <div class="contact-list">
+                <a class="contact-item" href="mailto:dlquangqui@gmail.com">
+                  <svg
+                    class="contact-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4 6.5A2.5 2.5 0 0 1 6.5 4h11A2.5 2.5 0 0 1 20 6.5v11A2.5 2.5 0 0 1 17.5 20h-11A2.5 2.5 0 0 1 4 17.5v-11Z"
+                      fill="currentColor"
+                      opacity="0.12"
+                    />
+                    <path
+                      d="M6.5 6h11c.83 0 1.5.67 1.5 1.5v.2l-7 4.8-7-4.8v-.2C5 6.67 5.67 6 6.5 6Z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M5 8.9V17.5c0 .83.67 1.5 1.5 1.5h11c.83 0 1.5-.67 1.5-1.5V8.9l-6.4 4.39a1 1 0 0 1-1.2 0L5 8.9Z"
+                      fill="currentColor"
+                      opacity="0.6"
+                    />
+                  </svg>
+                  <div class="contact-text">
+                    <span class="contact-k">Email</span>
+                    <span class="contact-v">dlquangqui@gmail.com</span>
+                  </div>
+                </a>
+                <a class="contact-item" href="tel:+84900000000">
+                  <svg
+                    class="contact-icon"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M7.5 3h2.2c.6 0 1.1.42 1.23 1l.55 3.1c.1.56-.18 1.12-.7 1.37l-1.6.78c.96 1.95 2.55 3.54 4.5 4.5l.78-1.6c.25-.52.81-.8 1.37-.7l3.1.55c.58.13 1 .63 1 1.23V16.5A2.5 2.5 0 0 1 18.5 19C11.6 19 5 12.4 5 5.5A2.5 2.5 0 0 1 7.5 3Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                  <div class="contact-text">
+                    <span class="contact-k">Số điện thoại</span>
+                    <span class="contact-v">0900 000 000</span>
+                  </div>
+                </a>
+                <a
+                  class="contact-item"
+                  href="https://github.com/QuangQui2002"
+                  target="_blank"
+                >
+                  <img class="contact-icon" src="image/github-sign.png" alt="" />
+                  <div class="contact-text">
+                    <span class="contact-k">GitHub</span>
+                    <span class="contact-v">QuangQui2002</span>
+                  </div>
+                </a>
+                <a
+                  class="contact-item"
+                  href="https://www.facebook.com/dlquangqui"
+                  target="_blank"
+                >
+                  <img class="contact-icon" src="image/facebook.png" alt="" />
+                  <div class="contact-text">
+                    <span class="contact-k">Facebook</span>
+                    <span class="contact-v">dlquangqui</span>
+                  </div>
+                </a>
+                <a
+                  class="contact-item"
+                  href="https://www.instagram.com/dlquangqui.danny/"
+                  target="_blank"
+                >
+                  <img class="contact-icon" src="image/instagram.png" alt="" />
+                  <div class="contact-text">
+                    <span class="contact-k">Instagram</span>
+                    <span class="contact-v">dlquangqui.danny</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <form class="contact-form" id="contactForm" novalidate>
+              <h3>Gửi tin nhắn</h3>
+
+              <div class="form-row">
+                <label class="form-field">
+                  <span>Họ tên</span>
+                  <input
+                    name="name"
+                    type="text"
+                    placeholder="Tên của bạn"
+                    autocomplete="name"
+                    required
+                  />
+                </label>
+                <label class="form-field">
+                  <span>Email</span>
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="you@email.com"
+                    autocomplete="email"
+                    required
+                  />
+                </label>
+              </div>
+
+              <label class="form-field">
+                <span>Nội dung</span>
+                <textarea
+                  name="message"
+                  rows="5"
+                  placeholder="Bạn mô tả ngắn nhu cầu/ý tưởng..."
+                  required
+                ></textarea>
+              </label>
+
+              <div class="form-actions">
+                <button class="primary-btn" type="submit">Gửi</button>
+                <p class="form-hint" id="contactHint" aria-live="polite"></p>
+              </div>
+            </form>
+          </div>
         </section>
       </main>
     </div>
