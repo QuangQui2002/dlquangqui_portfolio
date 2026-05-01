@@ -1,5 +1,7 @@
 const sections = Array.from(document.querySelectorAll(".section"));
 const navLinks = Array.from(document.querySelectorAll(".top-menu nav a"));
+const topMenu = document.querySelector(".top-menu");
+let scrollSpyTicking = false;
 
 function setActiveSection(sectionId) {
   navLinks.forEach((link) => {
@@ -30,7 +32,15 @@ navLinks.forEach((link) => {
 
     e.preventDefault();
     setActiveSection(href.slice(1));
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
+    const topMenuHeight = topMenu?.offsetHeight || 0;
+    const scrollOffset = topMenuHeight + 40;
+    const targetTop =
+      target.getBoundingClientRect().top + window.scrollY - scrollOffset;
+
+    window.scrollTo({
+      top: Math.max(targetTop, 0),
+      behavior: "smooth",
+    });
   });
 });
 
@@ -48,25 +58,33 @@ const revealObserver = new IntersectionObserver(
 
 sections.forEach((section) => revealObserver.observe(section));
 
-// Scroll-spy: keep menu active matching current section
-const spyObserver = new IntersectionObserver(
-  (entries) => {
-    const visible = entries
-      .filter((e) => e.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+// Scroll-spy: choose the section that crosses a stable scan line under the menu.
+function updateActiveSection() {
+  scrollSpyTicking = false;
 
-    if (!visible) return;
-    const id = visible.target.getAttribute("id");
-    if (id) setActiveSection(id);
-  },
-  {
-    root: null,
-    threshold: [0.2, 0.35, 0.5, 0.65],
-    rootMargin: "-20% 0px -60% 0px",
-  }
-);
+  const topMenuHeight = topMenu?.offsetHeight || 0;
+  const scanY = window.scrollY + topMenuHeight + window.innerHeight * 0.28;
+  let currentSection = sections[0];
 
-sections.forEach((section) => spyObserver.observe(section));
+  sections.forEach((section) => {
+    if (section.offsetTop <= scanY) {
+      currentSection = section;
+    }
+  });
+
+  const id = currentSection?.getAttribute("id");
+  if (id) setActiveSection(id);
+}
+
+function requestActiveSectionUpdate() {
+  if (scrollSpyTicking) return;
+  scrollSpyTicking = true;
+  window.requestAnimationFrame(updateActiveSection);
+}
+
+window.addEventListener("scroll", requestActiveSectionUpdate, { passive: true });
+window.addEventListener("resize", requestActiveSectionUpdate);
+requestActiveSectionUpdate();
 
 // Skills progress bars (1-time)
 const revealElements = Array.from(document.querySelectorAll(".reveal"));
