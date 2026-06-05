@@ -1,12 +1,24 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Quang Qui</title>
+        <meta name="description" content="Portfolio của Đào Lâm Quang Qui - Software Engineer, Fullstack Developer với các dự án web, hệ thống quản lý và ứng dụng thực tế."/>
+        <meta name="theme-color" content="#08132a"/>
+        <title>Quang Qui | Software Engineer Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;650;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
         <link rel="stylesheet" href="index.css"/>
     </head>
     <body>
+        <div class="ambient" aria-hidden="true">
+            <span class="orb orb-one"></span>
+            <span class="orb orb-two"></span>
+            <span class="orb orb-three"></span>
+            <span class="grid-glow"></span>
+        </div>
+        <div class="cursor-glow" aria-hidden="true"></div>
         <div class="container">
             <main class="content">
                 <header class="top-menu">
@@ -101,130 +113,99 @@
 
                 <section id="projects" class="section">
                     <h1 class="section-title">DỰ ÁN</h1>
+                    <p class="section-lead">
+                        Các dự án được trình bày dạng card gọn gàng. Bấm xem chi tiết để mở thông tin ứng dụng, demo và tải xuống nếu có file.
+                    </p>
 
-                    <div class="project-lines">
-                        <article class="project-row">
-                            <div class="project-head">
-                                <h3>Hệ thống quản lý học viên</h3>
-                                <span class="project-time">2023 – 2026</span>
-                            </div>
-                            <p class="project-desc">
-                                Website quản lý học viên, lịch dạy, quản lý các dữ liệu học tập. Website làm kiểm tra, bài tập cho học viên.
-                            </p>
-                            <ul class="project-highlights">
-                                <li>Quản lý danh sách học viên, lớp học, lịch học và điểm danh.</li>
-                                <li>Tìm kiếm, lọc dữ liệu, phân trang và export báo cáo.</li>
-                            </ul>
-                            <ul class="tech-list">
-                                <li>Node.js</li>
-                                <li>MySQL</li>
-                                <li>Sequelize</li>
-                                <li>jQuery</li>
-                            </ul>
-
-                        </article>
-
-                        <article class="project-row">
-                            <div class="project-head">
-                                <h3>Website Teach Cooking</h3>
-                                <span class="project-time">03/2026 – 04/2026</span>
-                            </div>
-                            <p class="project-desc">
-                                Website cho phép người dùng trao đổi cách thức nấu những món ăn ngon với nhau.
-                            </p>
-                            <ul class="project-highlights">
-                                <li>Phân Quyền: Admin và User.</li>
-                                <li>Tối ưu typography/spacing, tương thích mobile.</li>
-                                <li>Section-based navigation với active menu chính xác.</li>
-                            </ul>
-                            <ul class="tech-list">
-                                <li>Nodejs</li>
-                                <li>VueJS</li>
-                                <li>MySQL</li>
-                                <li>Express</li>
-                                <li>Vercel</li>
-                                <li>Railway</li>
-                                <li>Render</li>
-                            </ul>
-                            <div class="project-links">
-                                <a href="https://teach-cooking.vercel.app" rel="noopener">Demo</a>
-                            </div>
-                        </article>
-                    </div>
+                    <div class="projects-grid" id="projectsGrid" aria-live="polite"></div>
                 </section>
+
+                <div class="project-modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+                    <div class="project-modal__backdrop" data-close-modal></div>
+                    <article class="project-modal__panel" tabindex="-1">
+                        <button class="project-modal__close" type="button" aria-label="Đóng chi tiết dự án" data-close-modal>×</button>
+                        <div class="project-modal__media">
+                            <div class="project-gallery" id="projectGallery">
+                                <button class="gallery-btn gallery-btn--prev" type="button" aria-label="Ảnh trước" data-gallery-prev>‹</button>
+                                <img id="projectModalImage" src="" alt=""/>
+                                <button class="gallery-btn gallery-btn--next" type="button" aria-label="Ảnh tiếp theo" data-gallery-next>›</button>
+                                <span class="gallery-counter" id="projectGalleryCounter">1 / 1</span>
+                            </div>
+                            <div class="gallery-thumbs" id="projectGalleryThumbs" aria-label="Danh sách ảnh dự án"></div>
+                        </div>
+                        <div class="project-modal__content">
+                            <span class="project-modal__period" id="projectModalPeriod"></span>
+                            <h2 id="projectModalTitle"></h2>
+                            <p id="projectModalDescription"></p>
+                            <div class="project-modal__block">
+                                <h3>Điểm nổi bật</h3>
+                                <ul id="projectModalHighlights"></ul>
+                            </div>
+                            <div class="project-modal__block">
+                                <h3>Công nghệ</h3>
+                                <ul class="tech-list" id="projectModalTech"></ul>
+                            </div>
+                            <div class="project-actions" id="projectModalActions"></div>
+                        </div>
+                    </article>
+                </div>
                 <section id="skills" class="section skills-section">
                     <h2 class="section-title">My Skills</h2>
+                    <p class="section-lead">
+                        Bộ kỹ năng mình dùng để xây dựng giao diện, backend và triển khai sản phẩm thực tế.
+                    </p>
 
-                    <div
-                        class="skills-wrapper">
-                        <!-- Others -->
-                        <div class="skill-card reveal">
-                            <h3>Others</h3>
-
-                            <div class="skill">
-                                <span>Responsive Web Design</span>
-                                <div class="progress">
-                                    <div class="progress-bar" data-percent="85"></div>
-                                </div>
+                    <div class="skills-showcase">
+                        <div class="skill-orbit reveal" aria-label="Kỹ năng chính">
+                            <div class="orbit-ring orbit-ring-one"></div>
+                            <div class="orbit-ring orbit-ring-two"></div>
+                            <div class="orbit-core">
+                                <span>Fullstack</span>
+                                <strong>Developer</strong>
                             </div>
-
-                            <div class="skill">
-                                <span>Website Optimization</span>
-                                <div class="progress">
-                                    <div class="progress-bar" data-percent="80"></div>
-                                </div>
-                            </div>
+                            <span class="orbit-chip chip-html">HTML</span>
+                            <span class="orbit-chip chip-css">CSS</span>
+                            <span class="orbit-chip chip-js">JS</span>
+                            <span class="orbit-chip chip-node">Node</span>
+                            <span class="orbit-chip chip-db">MySQL</span>
                         </div>
 
-                        <!-- Coding -->
-                        <div class="skill-card main reveal">
-                            <h3>Coding Skills</h3>
-
-                            <div class="skill">
-                                <span>HTML / CSS / JS</span>
-                                <div class="progress">
-                                    <div class="progress-bar" data-percent="90"></div>
+                        <div class="skill-groups">
+                            <article class="skill-panel reveal">
+                                <span class="skill-panel__index">01</span>
+                                <h3>Frontend Craft</h3>
+                                <p>Thiết kế responsive, layout sạch, animation nhẹ và trải nghiệm người dùng mượt.</p>
+                                <div class="skill-tags">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                    <span>jQuery</span>
                                 </div>
-                            </div>
+                            </article>
 
-                            <div class="skill">
-                                <span>NodeJS / MySQL</span>
-                                <div class="progress">
-                                    <div class="progress-bar" data-percent="85"></div>
+                            <article class="skill-panel reveal">
+                                <span class="skill-panel__index">02</span>
+                                <h3>Backend Logic</h3>
+                                <p>Xây dựng API, xử lý dữ liệu, phân quyền và kết nối hệ thống quản lý nội bộ.</p>
+                                <div class="skill-tags">
+                                    <span>Node.js</span>
+                                    <span>Express</span>
+                                    <span>Sequelize</span>
+                                    <span>MySQL</span>
                                 </div>
-                            </div>
+                            </article>
 
-                            <div class="skill">
-                                <span>jQuery</span>
-                                <div class="progress">
-                                    <div class="progress-bar" data-percent="80"></div>
+                            <article class="skill-panel reveal">
+                                <span class="skill-panel__index">03</span>
+                                <h3>Tools & Workflow</h3>
+                                <p>Làm việc với source control, IDE, deploy cơ bản và tối ưu quy trình phát triển.</p>
+                                <div class="skill-tags">
+                                    <span>Git</span>
+                                    <span>GitHub</span>
+                                    <span>VS Code</span>
+                                    <span>Vercel</span>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Tools -->
-                        <div class="skill-card reveal">
-                            <h3>Tools</h3>
-
-                            <div class="skill">
-                                <span>Git / Github</span>
-                                <div class="progress">
-                                    <div class="progress-bar" data-percent="85"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill">
-                                <span>VS Code</span>
-                                <div class="progress">
-                                    <div class="progress-bar" data-percent="90"></div>
-                                </div>
-                            </div>
-                            <div class="skill">
-                                <span>VS Code</span>
-                                <div class="progress">
-                                    <div class="progress-bar" data-percent="90"></div>
-                                </div>
-                            </div>
+                            </article>
                         </div>
                     </div>
                 </section>
