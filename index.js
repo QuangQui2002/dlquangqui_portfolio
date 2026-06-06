@@ -1,56 +1,56 @@
 ﻿const projectsData = [
-  {
-    id: "student-management",
-    title: "Hệ thống quản lý học viên",
-    period: "2023 – 2026",
-    cover: "image/project-student.svg",
-    images: [
-      "image/project-student.svg",
-      "image/project-student.svg",
-      "image/project-student.svg",
-    ],
-    summary:
-      "Nền tảng quản lý học viên, lớp học, lịch học và dữ liệu học tập cho trung tâm.",
-    description:
-      "Website hỗ trợ quản lý danh sách học viên, lớp học, lịch dạy, bài tập, bài kiểm tra và báo cáo. Hệ thống tập trung vào thao tác nhanh, dữ liệu rõ ràng và khả năng mở rộng cho vận hành nội bộ.",
-    highlights: [
-      "Quản lý danh sách học viên, lớp học, lịch học và điểm danh.",
-      "Tìm kiếm, lọc dữ liệu, phân trang và export báo cáo.",
-      "Thiết kế module để dễ bổ sung tính năng kiểm tra, bài tập và thống kê.",
-    ],
-    tech: ["Node.js", "MySQL", "Sequelize", "jQuery"],
-    demoUrl: "",
-    download: {
-      label: "Tải ứng dụng",
-      file: "",
-    },
-  },
-  {
-    id: "teach-cooking",
-    title: "Website Teach Cooking",
-    period: "03/2026 – 04/2026",
-    cover: "image/project-cooking.svg",
-    images: [
-      "image/project-cooking.svg",
-      "image/project-cooking.svg",
-      "image/project-cooking.svg",
-    ],
-    summary:
-      "Website chia sẻ công thức nấu ăn, trao đổi kinh nghiệm và quản lý nội dung theo vai trò.",
-    description:
-      "Ứng dụng cho phép người dùng đăng, xem và trao đổi công thức nấu ăn. Phần quản trị hỗ trợ phân quyền Admin/User, kiểm soát nội dung và tối ưu trải nghiệm đọc công thức trên nhiều thiết bị.",
-    highlights: [
-      "Phân quyền Admin và User.",
-      "Giao diện responsive, tối ưu typography và spacing.",
-      "Triển khai frontend/backend trên các nền tảng cloud như Vercel, Railway và Render.",
-    ],
-    tech: ["Node.js", "VueJS", "MySQL", "Express", "Vercel", "Railway", "Render"],
-    demoUrl: "https://teach-cooking.vercel.app",
-    download: {
-      label: "Tải ứng dụng",
-      file: "",
-    },
-  },
+  // {
+  //   id: "student-management",
+  //   title: "Hệ thống quản lý học viên",
+  //   period: "2023 – 2026",
+  //   cover: "image/project-student.svg",
+  //   images: [
+  //     "image/project-student.svg",
+  //     "image/project-student.svg",
+  //     "image/project-student.svg",
+  //   ],
+  //   summary:
+  //     "Nền tảng quản lý học viên, lớp học, lịch học và dữ liệu học tập cho trung tâm.",
+  //   description:
+  //     "Website hỗ trợ quản lý danh sách học viên, lớp học, lịch dạy, bài tập, bài kiểm tra và báo cáo. Hệ thống tập trung vào thao tác nhanh, dữ liệu rõ ràng và khả năng mở rộng cho vận hành nội bộ.",
+  //   highlights: [
+  //     "Quản lý danh sách học viên, lớp học, lịch học và điểm danh.",
+  //     "Tìm kiếm, lọc dữ liệu, phân trang và export báo cáo.",
+  //     "Thiết kế module để dễ bổ sung tính năng kiểm tra, bài tập và thống kê.",
+  //   ],
+  //   tech: ["Node.js", "MySQL", "Sequelize", "jQuery"],
+  //   demoUrl: "",
+  //   download: {
+  //     label: "Tải ứng dụng",
+  //     file: "",
+  //   },
+  // },
+  // {
+  //   id: "teach-cooking",
+  //   title: "Website Teach Cooking",
+  //   period: "03/2026 – 04/2026",
+  //   cover: "image/project-cooking.svg",
+  //   images: [
+  //     "image/project-cooking.svg",
+  //     "image/project-cooking.svg",
+  //     "image/project-cooking.svg",
+  //   ],
+  //   summary:
+  //     "Website chia sẻ công thức nấu ăn, trao đổi kinh nghiệm và quản lý nội dung theo vai trò.",
+  //   description:
+  //     "Ứng dụng cho phép người dùng đăng, xem và trao đổi công thức nấu ăn. Phần quản trị hỗ trợ phân quyền Admin/User, kiểm soát nội dung và tối ưu trải nghiệm đọc công thức trên nhiều thiết bị.",
+  //   highlights: [
+  //     "Phân quyền Admin và User.",
+  //     "Giao diện responsive, tối ưu typography và spacing.",
+  //     "Triển khai frontend/backend trên các nền tảng cloud như Vercel, Railway và Render.",
+  //   ],
+  //   tech: ["Node.js", "VueJS", "MySQL", "Express", "Vercel", "Railway", "Render"],
+  //   demoUrl: "https://teach-cooking.vercel.app",
+  //   download: {
+  //     label: "Tải ứng dụng",
+  //     file: "",
+  //   },
+  // },
     {
     id: "so-quan-manage",
     title: "Sổ Quán Manage",
@@ -79,6 +79,35 @@
       file: `downloads/projects/SoQuan.rar`,
     },
   },
+  {
+  id: "passbee",
+  title: "PassBee",
+  period: "06/2026 – 06/2026",
+  cover: "image/passbee/dashboard.png",
+  images: [
+    "image/passbee/dashboard.png",
+    "image/passbee/add.png",
+    "image/passbee/inputpass.png",
+    "image/passbee/changepass.png",
+  ],
+  summary:
+    "Ứng dụng desktop Windows giúp khóa ứng dụng bằng mật khẩu, hỗ trợ chặn file .exe và shortcut .lnk thông qua Process Monitor.",
+  description:
+    "PassBee là ứng dụng desktop dùng để bảo vệ các ứng dụng Windows bằng mật khẩu. Người dùng có thể thêm file .exe hoặc shortcut .lnk vào danh sách bảo vệ. Khi ứng dụng bị khóa được mở trực tiếp từ Windows, PassBee sẽ phát hiện process, đóng ứng dụng đó và hiển thị popup yêu cầu nhập mật khẩu. Sau khi xác thực đúng, PassBee sẽ mở lại ứng dụng và cho phép sử dụng trong phiên hiện tại. Ứng dụng hỗ trợ chạy nền cùng Windows, ẩn cửa sổ khi đóng, chuyển đổi Tiếng Việt/English và lưu dữ liệu cục bộ trên máy.",
+  highlights: [
+    "Khóa ứng dụng Windows bằng mật khẩu, hỗ trợ cả file .exe và shortcut .lnk.",
+    "Process Monitor chạy nền giúp phát hiện và chặn ứng dụng chưa được xác thực.",
+    "Popup mở khóa nhanh, tự mở lại ứng dụng sau khi nhập đúng mật khẩu.",
+    "Hỗ trợ chạy cùng Windows, ẩn cửa sổ chính và chuyển đổi Tiếng Việt/English.",
+    "Mật khẩu được hash bằng bcryptjs và dữ liệu được lưu local trên máy người dùng.",
+  ],
+  tech: ["Tauri", "VueJS", "Pinia", "Rust", "bcryptjs"],
+  demoUrl: "",
+  download: {
+    label: "Tải ứng dụng",
+    file: `downloads/projects/PassBee_0.1.0_x64_en-US.rar`,
+  },
+}
 ];
 
 const sections = Array.from(document.querySelectorAll(".section"));
