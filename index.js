@@ -105,7 +105,7 @@
   demoUrl: "",
   download: {
     label: "Tải ứng dụng",
-    file: `downloads/projects/PassBee_0.1.0_x64_en-US.rar`,
+    file: `downloads/projects/PassBee_0.1.0_x64_en-US.msi`,
   },
 }
 ];
